@@ -42,7 +42,7 @@ const config = {
 		},
 		adapter: adapter({
 			// Specify your desired output directory here
-			out: './public',
+			out: '.',
 		  }),
 	},
 };
