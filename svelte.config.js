@@ -1,7 +1,7 @@
 import preprocess from 'svelte-preprocess';
-// import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { execSync } from 'child_process';
+import adapter from '@sveltejs/adapter-static';
 
 function getVersion() {
 	try {
@@ -40,6 +40,10 @@ const config = {
 		paths: {
 			relative: true,
 		},
+		adapter: adapter({
+			// Specify your desired output directory here
+			out: './public',
+		  }),
 	},
 };
 
