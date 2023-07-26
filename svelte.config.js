@@ -1,7 +1,7 @@
 import preprocess from 'svelte-preprocess';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 import { execSync } from 'child_process';
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-vercel';
 
 function getVersion() {
 	try {
@@ -42,8 +42,6 @@ const config = {
 		},
 		adapter: adapter({
 			runtime: 'nodejs18.x',
-			// Specify your desired output directory here
-			out: '/public',
 		  }),
 	},
 };
