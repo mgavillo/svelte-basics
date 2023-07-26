@@ -43,7 +43,7 @@ const config = {
 		adapter: adapter({
 			runtime: 'nodejs18.x',
 			// Specify your desired output directory here
-			out: '.',
+			out: '/public',
 		  }),
 	},
 };
